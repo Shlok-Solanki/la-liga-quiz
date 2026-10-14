@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Liga Quiz Challenge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+
+    <section id="screen-welcome" class="screen screen-welcome">
+      <h1 class="app-title">La Liga Quiz Challenge</h1>
+      <p class="app-intro">
+        Test your knowledge of Spanish football — clubs, legends, records, and iconic moments.
+        10 questions, 15 seconds each. Ready for kickoff?
+      </p>
+
+      <div class="difficulty" role="group" aria-label="Choose difficulty">
+        <button type="button" class="chip" data-difficulty="easy" aria-pressed="false">Easy</button>
+        <button type="button" class="chip" data-difficulty="medium" aria-pressed="false">Medium</button>
+        <button type="button" class="chip" data-difficulty="hard" aria-pressed="false">Hard</button>
+      </div>
+
+      <button type="button" id="btn-start" class="btn btn-primary">Start Quiz</button>
+    </section>
+
+    <section id="screen-quiz" class="screen screen-quiz" hidden>
+      <header class="quiz-header">
+        <div class="quiz-meta">
+          <span id="question-counter" class="question-counter">Question 1 of 10</span>
+          <span id="score-display" class="score-display">Score: 0</span>
+        </div>
+        <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" aria-label="Quiz progress">
+          <div id="progress-bar" class="progress-bar"></div>
+        </div>
+        <div class="timer" aria-live="polite">
+          <span id="timer-display" class="timer-display">15</span>
+          <span class="timer-unit">s</span>
+        </div>
+      </header>
+
+      <article id="question-card" class="card question-card">
+        <p class="question-labels">
+          <span id="question-category" class="label label-category">Category</span>
+          <span id="question-difficulty" class="label label-difficulty">Difficulty</span>
+        </p>
+        <h2 id="question-text" class="question-text">Question text appears here.</h2>
+        <div id="options" class="options"></div>
+      </article>
+
+      <div id="feedback" class="feedback" hidden>
+        <p id="feedback-verdict" class="feedback-verdict"></p>
+        <p id="feedback-explanation" class="feedback-explanation"></p>
+      </div>
+
+      <button type="button" id="btn-next" class="btn btn-primary">Next Question</button>
+    </section>
+
+    <section id="screen-results" class="screen screen-results" hidden>
+      <h2 class="results-title">Full Time!</h2>
+      <p id="results-score" class="results-score">0 / 100</p>
+      <p id="results-message" class="results-message"></p>
+
+      <dl class="results-stats">
+        <div class="stat">
+          <dt>Correct</dt>
+          <dd id="results-correct">0</dd>
+        </div>
+        <div class="stat">
+          <dt>Incorrect</dt>
+          <dd id="results-incorrect">0</dd>
+        </div>
+        <div class="stat">
+          <dt>Accuracy</dt>
+          <dd id="results-accuracy">0%</dd>
+        </div>
+      </dl>
+
+      <div class="results-actions">
+        <button type="button" id="btn-play-again" class="btn btn-primary">Play Again</button>
+        <button type="button" id="btn-review" class="btn btn-secondary">Review Answers</button>
+      </div>
+    </section>
+
+    <section id="screen-review" class="screen screen-review" hidden>
+      <h2 class="review-title">Review Answers</h2>
+      <div id="review-list" class="review-list"></div>
+      <button type="button" id="btn-back-results" class="btn btn-secondary">Back to Results</button>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
