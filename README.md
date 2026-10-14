@@ -64,6 +64,10 @@ la-liga-quiz/
 - Question and answer text uses real, verified La Liga facts.
 - No copyrighted club logos, crests, badges, or player photographs are used. The interface relies on text, color, and simple shapes only.
 
+
+## LIVE DEMO
+https://la-liga-quiz.vercel.app/
+
 ## Credits
 
 Built by Shlok Solanki as a beginner portfolio project using the KDBM Lite method (Spec → Build → Check → Ship).
